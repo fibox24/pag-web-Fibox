@@ -1,0 +1,70 @@
+{%extends 'core/base.html'%}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    {% block title %} Planes {% endblock %}
+    </head>
+    <body>
+          
+      <header>
+          {% block navbar %}
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="Inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" href="Planes">Planes</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="Quienes_somos">Quienes somos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contacto">Contacto</a>
+            </li>
+          </ul>
+          {% endblock %}
+          {%block header%}
+          <hr class="featurette-divider">
+          <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+              <h1 class="display-4 fw-normal" style="color: black">Planes</h1>
+              <p style="color: black">Tenemos el plan perfecto para vos. Solo tenes que pedirlo.</p>
+          </div>
+          {%endblock%}
+      </header>
+      <main>
+        {% block content %}
+        
+        <hr class="featurette-divider">
+
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          {%for planes in planes%}
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">{{planes.nombre}}</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">${{planes.precio}}<small class="text-muted fw-light">/més</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>{{planes.descripcion}}</li>
+
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary"><a class="nav-link" href="Contacto">Mas información</a></button>
+              </div>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+            
+        
+        {% endblock %}
+        {% block footer %}
+        <footer class="container">
+        </footer>
+        {% endblock %}
+
+      </main>
+    </body>
+</html>

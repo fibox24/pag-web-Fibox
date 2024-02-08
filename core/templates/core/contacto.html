@@ -1,0 +1,62 @@
+{%extends 'core/base.html'%}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    {% block title %} Contacto {% endblock %}
+    </head>
+    <body>
+            
+        <header>
+        {% block navbar %}
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="Inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="Planes">Planes</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="Quienes_somos">Quienes somos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" href="Contacto">Contacto</a>
+            </li>
+        </ul>
+        {% endblock %}
+        {%block header%}
+        <hr class="featurette-divider">
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center" style="color:black">
+            <h1 class="display-4 fw-normal">Ponte en contacto con nosotros</h1>
+            <p>Envianos un mensaje para que nuestro equipo de ventas se ponga en contacto con vos y te asesore de modo que encuentres el plan que mejor se adapta a vos.</p>
+        </div>
+        {%endblock%}
+        </header>
+        <main>
+            {% block content %}
+            <hr class="featurette-divider">
+                <div class="content">
+                    
+                    <div>
+                        {% if form.errors %}
+                            <p style="color: red;">Por favor, revisa este campo.</p>
+                        {% endif %}
+
+                        <form action="Contacto" method="POST" style="color: black">
+                            {% csrf_token %}
+                            <table>
+                                {{ miFormulario.as_table }}
+                            </table>
+                            <input class="btn btn-lg btn-primary" type="submit" value="Enviar" style="float: right;">
+                        </form>
+                    </div>
+                </div>
+            {% endblock %}
+
+            {% block footer %}
+            {% endblock %}
+
+        </main>
+    </body>
+</html>

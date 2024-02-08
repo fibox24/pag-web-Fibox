@@ -1,0 +1,160 @@
+{% extends 'core/base.html' %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+  <head>
+    {% block title %} Inicio {% endblock %}
+  </head>
+  <body>
+    
+    <header>
+      {% block navbar %}
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="Inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="Planes">Planes</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="Quienes_somos">Quienes somos</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="Contacto">Contacto</a>
+          </li>
+        </ul>
+      {% endblock %}
+    </header>
+
+    <main>
+      {% block content %}
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'slide_bg.jpeg' %}" height="100%" width="100%">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <rect width="100%" height="100%" fill="#777"/>
+            </svg>
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>¡Estamos en Coronel Moldes Salta!</h1>
+                <p>Ponete en contacto con nosotros para poder asesorarte y ver cual es el mejor plan para vos.</p>
+                <p><a class="btn btn-lg btn-primary" href="Contacto">Enviar un mensaje</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'slide_bg.jpeg' %}" height="100%" width="100%">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Internet por fibra óptica.</h1>
+                <p>Disfrutá de una conexión estable a una gran velocidad con alguno de nuestros planes.</p>
+                <p><a class="btn btn-lg btn-primary" href="Planes">Ir a ver los planes</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'slide_bg.jpeg' %}" height="100%" width="100%">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>¡Proximamente llegaremos a Salta Capital!</h1>
+                <p>Seguinos en nuestras redes para enterarte de todas las novedades.</p>
+                <p>                            
+                  <a class="footer__icono" href="https://www.instagram.com//" target="blank"><i class="fab fa-instagram-square fa-2x"></i></a>
+                  <a class="footer__icono" href="https://www.linkedin.com/" target="blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                  <a class="footer__icono" href="https://facebook.com/" target="blank"><i class="fab fa-facebook fa-2x"></i></a></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <div class="container marketing">
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Mapa de cobertura</span></h2>
+            <p class="lead">Recientemente empezamos nuestro despliegue en la localidad de Coronel Moldes. Seguinos en las redes para enterarte todas las novedades y promociones en todas las localidades.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="100%" height="100%" src="{% static 'mapa.jpg' %}">
+            <!--<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
+
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Nuestros planes</span></h2>
+            <p class="lead">Ofrecemos acceso a internet por fibra óptica a un precio competitivo. Sabemos que hoy por hoy es imprescindible estar "conectado" y es por eso que queremos que nos elijas. Vení a conocer nuestros planes.</p>
+            <p><a class="btn btn-lg btn-primary" href="Planes">Ir a ver los planes</a></p>
+          </div>
+          <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="100%" height="100%" src="{% static 'Fibox_feature.jpg' %}">
+            <!--<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
+
+          </div>
+        </div>
+      
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Somos Fibox</span></h2>
+            <p class="lead"> Somos un grupo de empresarios e ingenieros que sabe sobre telecomunicaciones
+              y sobre lo importante que es hoy en día el acceso a internet para llevar a cabo las actividades de nuestra vida diaria.
+              Por eso decidimos crear Fibox para poder brindar un buen servicio de internet acorde a las necesidades de nuestros usuarios.
+            </p>
+            <p><a class="btn btn-lg btn-primary" href="Quienes_somos">Conocenos</a></p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="100%" height="100%" src="{% static 'Fibox_feature1.jpg' %}">
+            <!--<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>-->
+
+          </div>
+        </div>
+
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+
+      {% endblock %}
+      <!-- FOOTER -->
+
+      {% block footer %}
+      
+      {% endblock %}
+
+    </main>
+
+
+    
+  </body>
+</html>

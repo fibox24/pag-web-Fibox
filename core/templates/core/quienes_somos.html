@@ -1,0 +1,49 @@
+{%extends 'core/base.html'%}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    {% block title %} Quienes Somos {% endblock %}
+    </head>
+    <body>
+            
+        <header>
+            {% block navbar %}
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="Inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Planes">Planes</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="Quienes_somos">Quienes somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contacto">Contacto</a>
+                </li>
+            </ul>
+            {% endblock %}
+            {%block header%}
+            <hr class="featurette-divider">
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h1 class="display-4 fw-normal" style="color:black">Acerca de nosotros...</h1>
+                <p text-align="center" style="color: black"> Somos un grupo de empresarios e ingenieros que sabe sobre telecomunicaciones <br>
+                    y sobre lo importante que es hoy en día el acceso a internet para llevar a cabo las actividades de nuestra vida diaria. <br>
+                    Por eso decidimos crear Fibox para poder brindar un buen servicio de internet acorde a las necesidades de nuestros usuarios.
+                </p>
+            </div>
+            {%endblock%}
+        </header>
+        <main>
+            {% block content %}
+
+            {% endblock %}
+
+            {% block footer %}
+            {% endblock %}
+
+        </main>
+    </body>
+</html>
