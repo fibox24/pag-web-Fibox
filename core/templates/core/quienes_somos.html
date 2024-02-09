@@ -1,5 +1,5 @@
 {%extends 'core/base.html'%}
-
+{%load static%}
 <!DOCTYPE html>
 
 <html>
@@ -28,11 +28,15 @@
             {%block header%}
             <hr class="featurette-divider">
             <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal" style="color:black">Acerca de nosotros...</h1>
-                <p text-align="center" style="color: black"> Somos un grupo de empresarios e ingenieros que sabe sobre telecomunicaciones <br>
-                    y sobre lo importante que es hoy en día el acceso a internet para llevar a cabo las actividades de nuestra vida diaria. <br>
-                    Por eso decidimos crear Fibox para poder brindar un buen servicio de internet acorde a las necesidades de nuestros usuarios.
-                </p>
+                <div class="resaltado_quienes_texto">
+                    <h1 class="display-4 fw-normal">Acerca de nosotros...</h1>
+                    <p text-align="center"> Somos un grupo de empresarios e ingenieros que sabe sobre telecomunicaciones <br>
+                        y sobre lo importante que es hoy en día el acceso a internet para llevar a cabo las actividades de nuestra vida diaria. <br>
+                        Por eso decidimos crear Fibox para poder brindar un buen servicio de internet acorde a las necesidades de nuestros usuarios.
+                    </p>
+                    <img src="{% static 'logoFibox1.png' %}">
+                </div>
+                <div class="resaltado_quienes"></div>
             </div>
             {%endblock%}
         </header>
