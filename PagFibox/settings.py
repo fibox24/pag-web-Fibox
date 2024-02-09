@@ -11,10 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
 from pathlib import Path
-import environ
 
-env = environ.Env()
-environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,10 +21,10 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-ej4o*&cpwgg7*2t-&n=lo2!r%0bed#yf6a=m8@=tdl$lf6qrha'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
