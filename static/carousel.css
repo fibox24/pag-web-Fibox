@@ -16,31 +16,78 @@ body {
 .carousel {
   margin-bottom: 4rem;
 }
-.text_carousel{
-  height: 50px;
-  margin: 0px;
-  border: 0px;
-  border-top-left-radius: 0.37rem;
-  border-top-right-radius: 0.37rem;
-  border-bottom-right-radius: 0.37rem;
-  border-bottom-left-radius: 0.37rem;
-  background-color: transparent;
-  padding: 10px;
-  color: black;
-  position: absolute;
-  z-index: 1;
+
+.contenedor_texto_carousel_1{
+  width : 90%;
+  max-width: 1800px;
+  margin: 20px auto;
+  display: grid;
+  text-align: center;
+  justify-content: left;
+  color: white;
+  float: left;
+  background-color: rgb(33,35,76);
+  grid-template-columns: repeat(1);
+  grid-template-rows: repeat(2, auto);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
-.resaltado_carousel{
-  height: 100px;
-  margin: 0px;
-  border: 0px;
-  border-top-left-radius: 0.37rem;
-  border-top-right-radius: 0.37rem;
-  border-bottom-right-radius: 0.37rem;
-  border-bottom-left-radius: 0.37rem;
-  background-color: #fff;
-  /* background-color: #E61280; */
-  opacity: 0.3;
+.contenedor_texto_carousel_2{
+  width : 90%;
+  max-width: 1800px;
+  margin: 20px auto;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  background-color: rgb(230,18,128);
+  grid-template-columns: repeat(1);
+  grid-template-rows: repeat(2, auto);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.contenedor_texto_carousel_3{
+  width : 95%;
+  max-width: 1850px;
+  margin: 20px auto;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:  "carousel_texto carousel_texto carousel_texto carousel_texto"
+                        "carousel_texto carousel_texto carousel_texto carousel_texto"
+                        "carousel_redes carousel_redes carousel_redes carousel_redes";
+
+  background-color: transparent;
+}
+
+.contenedor_texto_carousel_3 .carousel_texto{
+  width : 95%;
+  max-width: 1850x;
+  margin: 20px 0px 20px auto;
+  display: grid;
+  text-align: center;
+  float:right;
+  grid-area: carousel_texto;
+  background-color: rgb(115,115,143);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.contenedor_texto_carousel_3 .carousel_redes{
+  margin: 20px 0px 20px auto;
+  /*display: grid;
+  /*text-align: center;
+  justify-content: center;*/
+  background-color: transparent;
+  /*grid-area: carousel_redes;*/
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -199,7 +246,10 @@ body {
     font-size: 1.25rem;
     line-height: 1.4;
   }
-
+  .footer__icono{
+    width: 10px;
+    height: 10px;
+  }  
   .featurette-heading {
     font-size: 50px;
   }
