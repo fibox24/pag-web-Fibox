@@ -219,25 +219,33 @@ body {
   background-color: transparent; */
 }
 .formulario_contacto{
+  height: 100%;
+  width: auto;
   display:grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;
+  margin:auto; 
+  padding: 100px;
   justify-content: center;
+  color:white;
  
 }
 .resaltado_contacto{
-  height: 150px;
-  margin: 0px;
-  border: 0px;
-  border-top-left-radius: 0.37rem;
-  border-top-right-radius: 0.37rem;
-  border-bottom-right-radius: 0.37rem;
-  border-bottom-left-radius: 0.37rem;
-  background-color: white;
-  color: white;
-  opacity: .3;
+  box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.2);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  background-color: var(--azul-oscuro);
+  opacity: .8;
+  text-align: left;
+  justify-content: center;
+  display:flex;
+  align-items: center;
 }
-.resaltado_contacto_formulario{
+/* .resaltado_contacto_formulario{
+  height: 100%;
+  width: 1fr;
   height: 500px;
   width: 600px;
   margin: 0px;
@@ -249,8 +257,8 @@ body {
   background-color: white;
   color: white;
   opacity: .3;
-}
-.resaltado_contacto_texto{
+} */
+/* .resaltado_contacto_texto{
   height: 50px;
   margin: auto;
   border: 0px;
@@ -262,7 +270,7 @@ body {
   padding: 10px;
   position: absolute;
   z-index: 1;
-}
+} */
 
 
 /* rtl:end:remove */

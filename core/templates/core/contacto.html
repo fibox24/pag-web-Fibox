@@ -39,26 +39,26 @@
         <main>
             {% block content %}
             <!-- <hr class="featurette-divider"> -->
-                <div class="carousel_texto" style="justify-content: center; background-color: var(--azul-oscuro)";>
+                <div class="resaltado_contacto";>
                     
                     <div class="formulario_contacto">
                         {% if form.errors %}
                             <p style="color: red;">Por favor, revisa este campo.</p>
                         {% endif %}
-                        <div style="margin:0px; padding: 60px; position: absolute; z-index: 1;">
-                            <form action="Contacto" method="POST" style="color: black">
-                                {% csrf_token %}
-                                <table>
-                                    <p><strong>{{ miFormulario.nombre.label }}:</strong> {{ miFormulario.nombre }}</p>
-                                    <p><strong>{{ miFormulario.email.label }}:</strong>      {{ miFormulario.email }}</p>                               
-                                    <p><strong>{{ miFormulario.asunto.label }}:</strong>     {{ miFormulario.asunto }}</p>                                
-                                    <p><strong>{{ miFormulario.mensaje.label }}</strong>:</p>
-                                    {{ miFormulario.mensaje }}
-                                </table>
-                                <input class="btn btn-lg btn-primary" type="submit" value="Enviar" style="float: right;">
-                            </form>
-                        </div>
-                        <div class="resaltado_contacto_formulario"></div>
+                            <!-- <div style="margin:0px; padding: 60px; z-index: 1;"> -->
+                        <form action="Contacto" method="POST" style="color: white;">
+                            {% csrf_token %}
+                            <table>
+                                <p><strong>{{ miFormulario.nombre.label }}:</strong> {{ miFormulario.nombre }}</p>
+                                <p><strong>{{ miFormulario.email.label }}:</strong>      {{ miFormulario.email }}</p>                               
+                                <p><strong>{{ miFormulario.asunto.label }}:</strong>     {{ miFormulario.asunto }}</p>                                
+                                <p><strong>{{ miFormulario.mensaje.label }}</strong>:</p>
+                                {{ miFormulario.mensaje }}
+                            </table>
+                            <input class="btn btn-lg btn-primary" type="submit" value="Enviar" style="float:right">
+                        </form>
+                            <!-- </div> -->
+                            <!-- <div class="resaltado_contacto_formulario"></div>  -->
                     </div>
                 </div>
             {% endblock %}
